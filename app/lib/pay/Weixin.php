@@ -22,7 +22,7 @@ class Weixin implements PayBase
         $config = [
             // 必要配置
             'app_id' => 'wx60f330220b4ed8c9',
-            'mch_id' => '1563901631',
+            'mch_id' => '1526698861',
             'key' => '1234567890qwertyuiopasdfghjklzxc',   // API 密钥
             // 如需使用敏感接口（如退款、发送红包等）需要配置 API 证书路径(登录商户平台下载 API 证书)
             'cert_path' => 'cert.pem', // XXX: 绝对路径！！！！
