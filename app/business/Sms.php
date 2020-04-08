@@ -20,4 +20,15 @@ class Sms {
 
         return $sms;
     }
+
+
+    public static function sendTemplate(string $phoneNumber,string $type = "ali",$codeType,$params) :bool{
+
+        // 我们需要生成我们短信验证码 4位  6位
+        $classStats = ClassArr::smsClassStat();
+        $classObj = ClassArr::initClass($type, $classStats);
+        $sms = $classObj::sendTemplate($phoneNumber, $codeType,$params);
+
+        return $sms;
+    }
 }

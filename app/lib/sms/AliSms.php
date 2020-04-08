@@ -27,7 +27,7 @@ class AliSms implements SmsBase
     private $accessKeySecret = '';
     private $templateCode = '';
 
-    public function __construct(string $type)
+    public function __construct()
     {
         $config = (new AliSmsT())->find();
         if (empty($config)) {
@@ -38,12 +38,6 @@ class AliSms implements SmsBase
         $this->signName = $config->sign_name;
         $this->accessKeyId = $config->access_key_id;
         $this->accessKeySecret = $config->access_key_secret;
-        $template = (new AliTemplateCodeT())->code($type);
-        if (empty($template)) {
-            throw new ParameterException(['msg' => '配置参数异常,类别不存在']);
-        }
-        $this->templateCode = $template->template_code;
-
     }
 
     /**
@@ -59,6 +53,7 @@ class AliSms implements SmsBase
         if (empty($phone) || empty($code)) {
             return false;
         }
+
 
         AlibabaCloud::accessKeyClient(config("aliyun.access_key_id"),
             config("aliyun.access_key_secret"))
@@ -101,9 +96,16 @@ class AliSms implements SmsBase
 
     public function sendTemplate(string $phone, string $type, string $params)
     {
-        if (empty($phone) || empty($code)) {
+        if (empty($phone) || empty($params) || empty($type)) {
             return false;
         }
+
+        $template = (new AliTemplateCodeT())->code($type);
+        if (empty($template)) {
+            throw new ParameterException(['msg' => '配置参数异常,类别不存在']);
+        }
+        $this->templateCode = $template->template_code;
+
 
         AlibabaCloud::accessKeyClient($this->accessKeyId,
             $this->accessKeySecret)
