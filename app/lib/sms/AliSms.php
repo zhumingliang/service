@@ -86,7 +86,7 @@ class AliSms implements SmsBase
         if (empty($phone) || empty($params) || empty($type)) {
             return false;
         }
-        $config = (new AliSmsT())->find();
+        $config = (new AliSmsT())->config();
         if (empty($config)) {
             throw new ParameterException(['msg' => '配置参数异常']);
         }
