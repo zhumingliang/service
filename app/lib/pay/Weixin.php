@@ -8,9 +8,11 @@
 
 namespace app\lib\pay;
 
+use app\lib\exception\WeChatException;
 use app\lib\pay\weixin\lib\database\WxPayUnifiedOrder;
 use app\lib\pay\weixin\lib\WxPayNativePay;
 use EasyWeChat\Factory;
+use think\Exception;
 
 class Weixin implements PayBase
 {
@@ -42,45 +44,31 @@ class Weixin implements PayBase
      */
     public function unifiedOrder($data)
     {
-        //$app = $this->getApp($data['company_id']);
-        $result = $this->app->order->unify([
-            'body' => $data['body'],
-            'out_trade_no' => $data['out_trade_no'],
-            'total_fee' => $data['total_fee'],
-            'trade_type' => 'JSAPI',
-            'sign_type' => 'MD5',
-            'openid' => $data['openid']
-        ]);
-        print_r($result);
-        return $result;
-        /* try {
-             $notify = new WxPayNativePay();
-             $input = new WxPayUnifiedOrder();
-             // 可以取业务方标题
-             $input->SetBody($data['body']);
-             $input->SetOut_trade_no($data['order_id']);
-             $input->SetTotal_fee($data['total_price']);
-             $input->SetTime_start(date("YmdHis"));
-             $input->SetTime_expire(date("YmdHis", time() + config("pay.pay_expire.weixin")));
-             $input->SetNotify_url(config("pay.pay_notify.weixin"));
-             $input->SetTrade_type("NATIVE");
-             $input->SetProduct_id($data['goods_id']);
+        try {
+            //$app = $this->getApp($data['company_id']);
+            $result = $this->app->order->unify([
+                'body' => $data['body'],
+                'out_trade_no' => $data['out_trade_no'],
+                'total_fee' => $data['total_fee'],
+                'trade_type' => 'JSAPI',
+                'sign_type' => 'MD5',
+                'openid' => $data['openid']
+            ]);
+            print_r($result);
+            if ($result && isset($result['result_code'])
+                && isset($result['return_code'])
+                && $result['result_code'] == "SUCCESS"
+                && $result['return_code'] == "SUCCESS"
+            ) {
+                $url = $result["code_url"];
+                return request()->domain() . (string)url("qcode/index", ["data" => $url]);
+            } else {
 
-             $result = $notify->GetPayUrl($input);
-             // 记录日志 $result
-         } catch (\Exception $e) {
-             throw new \Exception("对接微信支付内部异常");
-         }
-         if ($result && isset($result['result_code'])
-             && isset($result['return_code'])
-             && $result['result_code'] == "SUCCESS"
-             && $result['return_code'] == "SUCCESS"
-         ) {
-             $url = $result["code_url"];
-             return request()->domain() . (string)url("qcode/index", ["data" => $url]);
-         } else {
-
-             throw new \Exception("下单失败，请稍候重试");
-         }*/
+                throw new \Exception("下单失败，请稍候重试");
+            }
+            return $result;
+        } catch (\Exception $e) {
+            throw new WeChatException(['msg' => "对接微信支付内部异常"]);
+        }
     }
 }

@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2425b558-33b4-4e0c-9f37-7bd3e328fdaf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/lib/Http.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/AliSmsT.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/model/AliTemplateCodeT.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/Sms.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/Sms.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/pay/Weixin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/pay/Weixin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/sms/AliSms.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/sms/AliSms.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/sms/BaiduSms.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/sms/JdSms.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/sms/JdSms.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/sms/SmsBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/sms/SmsBase.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +29,59 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/overtrue/wechat" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-orm" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-trace" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/lunzi/tp-sms" />
+      <path value="$PROJECT_DIR$/vendor/topthink/framework" />
+      <path value="$PROJECT_DIR$/vendor/adbario/php-dot-notation" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-helper" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-factory" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-multi-app" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/mtdowling/jmespath.php" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-queue" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem-cached-adapter" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/clagiordano/weblibs-configmanager" />
+      <path value="$PROJECT_DIR$/vendor/overtrue/socialite" />
+      <path value="$PROJECT_DIR$/vendor/danielstjules/stringy" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/easywechat-composer/easywechat-composer" />
+      <path value="$PROJECT_DIR$/vendor/pimple/pimple" />
+      <path value="$PROJECT_DIR$/vendor/alibabacloud/client" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+    </include_path>
   </component>
   <component name="ProjectId" id="1XxkChRpcShhDMAokMSyWOSdH4X" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -71,7 +132,11 @@
       <workItem from="1583810850557" duration="1148000" />
       <workItem from="1583815667195" duration="21673000" />
       <workItem from="1583940798399" duration="530000" />
-      <workItem from="1583941614830" duration="1859000" />
+      <workItem from="1583941614830" duration="2950000" />
+      <workItem from="1584322397464" duration="505000" />
+      <workItem from="1584407808923" duration="5079000" />
+      <workItem from="1584882392563" duration="560000" />
+      <workItem from="1586264488257" duration="4089000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1583940212600</created>
@@ -108,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583944415900</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="初始化">
+      <created>1583945219423</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1583945219423</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,26 +208,26 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1583903416913" />
-    <state x="330" y="56" key="CommitChangelistDialog2" timestamp="1583944413794">
+    <state x="330" y="56" key="CommitChangelistDialog2" timestamp="1586317419670">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="330" y="56" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1583944413794" />
-    <state x="539" y="310" key="NewPhpClassDialog" timestamp="1583852852363">
+    <state x="330" y="56" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1586317419670" />
+    <state x="539" y="310" key="NewPhpClassDialog" timestamp="1586313585595">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="539" y="310" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1583852852363" />
+    <state x="539" y="310" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1586313585595" />
     <state x="218" y="76" key="SettingsEditor" timestamp="1583822250881">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="218" y="76" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1583822250881" />
-    <state width="625" height="500" key="SwitcherDM" timestamp="1583842234959">
+    <state width="625" height="500" key="SwitcherDM" timestamp="1584409370547">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="625" height="500" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1583842234959" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1583944425176">
+    <state width="625" height="500" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1584409370547" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1583945224609">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1583944425176" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1583945224609" />
     <state x="600" y="208" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1583944333713">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

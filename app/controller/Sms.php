@@ -16,7 +16,20 @@ class Sms extends BaseController
     {
         $phoneNumber = input('param.phone_number', '', 'trim');
 
-       // return $phoneNumber;
+        // return $phoneNumber;
+        if (SmsBus::sendCode($phoneNumber, 6, "ali")) {
+            return json(new SuccessMessageWithData(['msg' => '发送验证码成功']));
+        }
+        return json(new SaveException(['msg' => '发送验证码失败']));
+    }
+
+    public function template()
+    {
+        $phoneNumber = input('param.phone_number', '', 'trim');
+        $type = input('param.type', '', 'trim');
+        $params = input('param.params', '', 'trim');
+
+        // return $phoneNumber;
         if (SmsBus::sendCode($phoneNumber, 6, "ali")) {
             return json(new SuccessMessageWithData(['msg' => '发送验证码成功']));
         }

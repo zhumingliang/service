@@ -6,9 +6,17 @@
  * Time: 01:14
  */
 declare(strict_types=1);
+
 namespace app\lib\sms;
-class JdSms implements SmsBase {
-    public static function sendCode(string $phone, int $code) {
+class JdSms implements SmsBase
+{
+    public static function sendCode(string $phone, int $code)
+    {
+        return true;
+    }
+
+    public function sendTemplate(string $phone, string $type, string $params)
+    {
         return true;
     }
 }

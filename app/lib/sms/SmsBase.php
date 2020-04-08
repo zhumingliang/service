@@ -6,8 +6,12 @@
  * Time: 01:17
  */
 declare(strict_types=1);
+
 namespace app\lib\sms;
 
-interface SmsBase {
+interface SmsBase
+{
     public static function sendCode(string $phone, int $code);
+
+    public function sendTemplate(string $phone, string $type, string $params);
 }
