@@ -81,7 +81,7 @@ class AliSms implements SmsBase
 
     }
 
-    public static function sendTemplate(string $phone, string $type, string $params)
+    public static function sendTemplate(string $phone, string $type, array $params)
     {
         if (empty($phone) || empty($params) || empty($type)) {
             return false;
@@ -103,9 +103,9 @@ class AliSms implements SmsBase
         $templateCode = $template->template_code;
 
 
-        AlibabaCloud::accessKeyClient(accessKeyId,
+        AlibabaCloud::accessKeyClient($accessKeyId,
             $accessKeySecret)
-            ->regionId(regionId)
+            ->regionId($regionId)
             ->asDefaultClient();
 
         try {
@@ -115,14 +115,14 @@ class AliSms implements SmsBase
                 ->version('2017-05-25')
                 ->action('SendSms')
                 ->method('POST')
-                ->host(config("aliyun.host"))
+                ->host($host)
                 ->options([
                     'query' => [
                         'RegionId' => $regionId,
                         'PhoneNumbers' => $phone,
                         'SignName' => $signName,
                         'TemplateCode' => $templateCode,
-                        'TemplateParam' => $params,
+                        'TemplateParam' => json_encode($params),
                     ],
                 ])
                 ->request();

@@ -22,7 +22,7 @@ class Sms {
     }
 
 
-    public static function sendTemplate(string $phoneNumber,string $codeType,string $params,string $type = "ali") :bool{
+    public static function sendTemplate(string $phoneNumber,string $codeType,array $params,string $type = "ali") :bool{
 
         $classStats = ClassArr::smsClassStat();
         $classObj = ClassArr::initClass($type, $classStats);
