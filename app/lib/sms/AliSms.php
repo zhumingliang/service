@@ -27,19 +27,6 @@ class AliSms implements SmsBase
     private $accessKeySecret = '';
     private $templateCode = '';
 
-    public function __construct()
-    {
-        $config = (new AliSmsT())->find();
-        if (empty($config)) {
-            throw new ParameterException(['msg' => '配置参数异常']);
-        }
-        $this->host = $config->host;
-        $this->regionId = $config->region_id;
-        $this->signName = $config->sign_name;
-        $this->accessKeyId = $config->access_key_id;
-        $this->accessKeySecret = $config->access_key_secret;
-    }
-
     /**
      * 阿里云发送短信验证码的场景
      * @param string $phone
@@ -94,22 +81,31 @@ class AliSms implements SmsBase
 
     }
 
-    public function sendTemplate(string $phone, string $type, string $params)
+    public static function sendTemplate(string $phone, string $type, string $params)
     {
         if (empty($phone) || empty($params) || empty($type)) {
             return false;
         }
+        $config = (new AliSmsT())->find();
+        if (empty($config)) {
+            throw new ParameterException(['msg' => '配置参数异常']);
+        }
+        $host = $config->host;
+        $regionId = $config->region_id;
+        $signName = $config->sign_name;
+        $accessKeyId = $config->access_key_id;
+        $accessKeySecret = $config->access_key_secret;
 
         $template = (new AliTemplateCodeT())->code($type);
         if (empty($template)) {
             throw new ParameterException(['msg' => '配置参数异常,类别不存在']);
         }
-        $this->templateCode = $template->template_code;
+        $templateCode = $template->template_code;
 
 
-        AlibabaCloud::accessKeyClient($this->accessKeyId,
-            $this->accessKeySecret)
-            ->regionId($this->regionId)
+        AlibabaCloud::accessKeyClient(accessKeyId,
+            $accessKeySecret)
+            ->regionId(regionId)
             ->asDefaultClient();
 
         try {
@@ -122,10 +118,10 @@ class AliSms implements SmsBase
                 ->host(config("aliyun.host"))
                 ->options([
                     'query' => [
-                        'RegionId' => $this->regionId,
+                        'RegionId' => $regionId,
                         'PhoneNumbers' => $phone,
-                        'SignName' => $this->signName,
-                        'TemplateCode' => $this->templateCode,
+                        'SignName' => $signName,
+                        'TemplateCode' => $templateCode,
                         'TemplateParam' => $params,
                     ],
                 ])
