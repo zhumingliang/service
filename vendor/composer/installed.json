@@ -735,6 +735,53 @@
         ]
     },
     {
+        "name": "mtdowling/cron-expression",
+        "version": "v1.2.3",
+        "version_normalized": "1.2.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mtdowling/cron-expression.git",
+            "reference": "9be552eebcc1ceec9776378f7dcc085246cacca6"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mtdowling/cron-expression/zipball/9be552eebcc1ceec9776378f7dcc085246cacca6",
+            "reference": "9be552eebcc1ceec9776378f7dcc085246cacca6",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0|~5.0"
+        },
+        "time": "2019-12-28T04:23:06+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Cron\\": "src/Cron/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            }
+        ],
+        "description": "CRON for PHP: Calculate the next or previous run date and determine if a CRON expression is due",
+        "keywords": [
+            "cron",
+            "schedule"
+        ],
+        "abandoned": "dragonmantank/cron-expression"
+    },
+    {
         "name": "mtdowling/jmespath.php",
         "version": "2.5.0",
         "version_normalized": "2.5.0.0",
@@ -2821,5 +2868,56 @@
             }
         ],
         "description": "thinkphp debug trace"
+    },
+    {
+        "name": "yunwuxin/think-cron",
+        "version": "v3.0.1",
+        "version_normalized": "3.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/yunwuxin/think-cron.git",
+            "reference": "44e4133c4e8ef0f59ebae095575e0b2c73caf9f5"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/yunwuxin/think-cron/zipball/44e4133c4e8ef0f59ebae095575e0b2c73caf9f5",
+            "reference": "44e4133c4e8ef0f59ebae095575e0b2c73caf9f5",
+            "shasum": ""
+        },
+        "require": {
+            "mtdowling/cron-expression": "^1.2",
+            "nesbot/carbon": "^2.28",
+            "symfony/process": "^4.4",
+            "topthink/framework": "^6.0"
+        },
+        "time": "2020-01-12T06:44:32+00:00",
+        "type": "library",
+        "extra": {
+            "think": {
+                "config": {
+                    "cron": "src/config.php"
+                },
+                "services": [
+                    "yunwuxin\\cron\\Service"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "yunwuxin\\cron\\": "src/cron"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "yunwuxin",
+                "email": "448901948@qq.com"
+            }
+        ],
+        "description": "计划任务"
     }
 ]

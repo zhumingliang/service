@@ -109,23 +109,42 @@ class AliSms implements SmsBase
             ->asDefaultClient();
 
         try {
-            $result = AlibabaCloud::rpc()
-                ->product('Dysmsapi')
-                // ->scheme('https') // https | http
-                ->version('2017-05-25')
-                ->action('SendSms')
-                ->method('POST')
-                ->host($host)
-                ->options([
-                    'query' => [
-                        'RegionId' => $regionId,
-                        'PhoneNumbers' => $phone,
-                        'SignName' => $signName,
-                        'TemplateCode' => $templateCode,
-                        'TemplateParam' => json_encode($params),
-                    ],
-                ])
-                ->request();
+            if (empty($params)){
+                $result = AlibabaCloud::rpc()
+                    ->product('Dysmsapi')
+                    // ->scheme('https') // https | http
+                    ->version('2017-05-25')
+                    ->action('SendSms')
+                    ->method('POST')
+                    ->host($host)
+                    ->options([
+                        'query' => [
+                            'RegionId' => $regionId,
+                            'PhoneNumbers' => $phone,
+                            'SignName' => $signName,
+                            'TemplateCode' => $templateCode
+                        ],
+                    ])
+                    ->request();
+            }else{
+                $result = AlibabaCloud::rpc()
+                    ->product('Dysmsapi')
+                    // ->scheme('https') // https | http
+                    ->version('2017-05-25')
+                    ->action('SendSms')
+                    ->method('POST')
+                    ->host($host)
+                    ->options([
+                        'query' => [
+                            'RegionId' => $regionId,
+                            'PhoneNumbers' => $phone,
+                            'SignName' => $signName,
+                            'TemplateCode' => $templateCode,
+                            'TemplateParam' => json_encode($params),
+                        ],
+                    ])
+                    ->request();
+            }
             Log::info("alisms-sendCode-{$phone}result" . json_encode($result->toArray()));
         } catch (ClientException $e) {
             Log::error("alisms-sendCode-{$phone}ClientException" . $e->getErrorMessage());

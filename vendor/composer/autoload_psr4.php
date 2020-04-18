@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'yunwuxin\\cron\\' => array($vendorDir . '/yunwuxin/think-cron/src/cron'),
     'think\\trace\\' => array($vendorDir . '/topthink/think-trace/src'),
     'think\\app\\' => array($vendorDir . '/topthink/think-multi-app/src'),
     'think\\' => array($vendorDir . '/topthink/framework/src/think', $vendorDir . '/topthink/think-factory/src', $vendorDir . '/topthink/think-helper/src', $vendorDir . '/topthink/think-orm/src', $vendorDir . '/topthink/think-queue/src'),
@@ -46,6 +47,7 @@ return array(
     'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
     'EasyWeChat\\' => array($vendorDir . '/overtrue/wechat/src'),
     'EasyWeChatComposer\\' => array($vendorDir . '/easywechat-composer/easywechat-composer/src'),
+    'Cron\\' => array($vendorDir . '/mtdowling/cron-expression/src/Cron'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
     'AlibabaCloud\\Client\\' => array($vendorDir . '/alibabacloud/client/src'),
     'Adbar\\' => array($vendorDir . '/adbario/php-dot-notation/src'),

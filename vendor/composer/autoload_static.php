@@ -27,6 +27,10 @@ class ComposerStaticInitf9cbae28cf63931be848cf3c8d046ad0
     );
 
     public static $prefixLengthsPsr4 = array (
+        'y' => 
+        array (
+            'yunwuxin\\cron\\' => 14,
+        ),
         't' => 
         array (
             'think\\trace\\' => 12,
@@ -105,6 +109,7 @@ class ComposerStaticInitf9cbae28cf63931be848cf3c8d046ad0
         ),
         'C' => 
         array (
+            'Cron\\' => 5,
             'Carbon\\' => 7,
         ),
         'A' => 
@@ -115,6 +120,10 @@ class ComposerStaticInitf9cbae28cf63931be848cf3c8d046ad0
     );
 
     public static $prefixDirsPsr4 = array (
+        'yunwuxin\\cron\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yunwuxin/think-cron/src/cron',
+        ),
         'think\\trace\\' => 
         array (
             0 => __DIR__ . '/..' . '/topthink/think-trace/src',
@@ -278,6 +287,10 @@ class ComposerStaticInitf9cbae28cf63931be848cf3c8d046ad0
         'EasyWeChatComposer\\' => 
         array (
             0 => __DIR__ . '/..' . '/easywechat-composer/easywechat-composer/src',
+        ),
+        'Cron\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron',
         ),
         'Carbon\\' => 
         array (
