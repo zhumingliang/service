@@ -21,6 +21,6 @@ class clearOrder extends Task
      */
     protected function execute()
     {
-        LogT::saveInfo(date('Y-m-d H:i:d'));
+        LogT::saveInfo(date('Y-m-d H:i:s'));
     }
 }
