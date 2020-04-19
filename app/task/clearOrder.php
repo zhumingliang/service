@@ -12,7 +12,7 @@ class clearOrder extends Task
 
     public function configure()
     {
-        $this->everyMinute(); //设置任务的周期，每天执行一次，更多的方法可以查看源代码，都有注释
+        $this->daily(); //设置任务的周期，每天执行一次，更多的方法可以查看源代码，都有注释
     }
 
     /**
