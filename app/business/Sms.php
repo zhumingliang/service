@@ -22,11 +22,11 @@ class Sms {
     }
 
 
-    public static function sendTemplate(string $phoneNumber,string $codeType,array $params,string $type = "ali") :bool{
+    public static function sendTemplate(string $phoneNumber,string $codeType,array $params,string $type = "ali",string $sign="ok") :bool{
 
         $classStats = ClassArr::smsClassStat();
         $classObj = ClassArr::initClass($type, $classStats);
-        $sms = $classObj::sendTemplate($phoneNumber, $codeType,$params);
+        $sms = $classObj::sendTemplate($phoneNumber, $codeType,$params,$sign);
         return $sms;
     }
 }

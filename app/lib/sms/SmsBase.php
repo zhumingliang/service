@@ -13,5 +13,5 @@ interface SmsBase
 {
     public static function sendCode(string $phone, int $code);
 
-    public static function sendTemplate(string $phone, string $type, array $params);
+    public static function sendTemplate(string $phone, string $type, array $params,string $sign);
 }

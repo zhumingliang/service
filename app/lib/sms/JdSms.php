@@ -15,7 +15,7 @@ class JdSms implements SmsBase
         return true;
     }
 
-    public function sendTemplate(string $phone, string $type, array $params)
+    public function sendTemplate(string $phone, string $type, array $params,string $sign)
     {
         return true;
     }

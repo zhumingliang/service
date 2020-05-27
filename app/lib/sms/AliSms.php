@@ -68,11 +68,9 @@ class AliSms implements SmsBase
                     ],
                 ])
                 ->request();
-            Log::info("alisms-sendCode-{$phone}result" . json_encode($result->toArray()));
         } catch (ClientException $e) {
             Log::error("alisms-sendCode-{$phone}ClientException" . $e->getErrorMessage());
             return false;
-            //echo $e->getErrorMessage() . PHP_EOL;
         }
         if (isset($result['Code']) && $result['Code'] == "OK") {
             return true;
@@ -81,12 +79,12 @@ class AliSms implements SmsBase
 
     }
 
-    public static function sendTemplate(string $phone, string $type, array $params)
+    public static function sendTemplate(string $phone, string $type, array $params,string $sign)
     {
         if (empty($phone) || empty($params) || empty($type)) {
             return false;
         }
-        $config = (new AliSmsT())->config();
+        $config = (new AliSmsT())->config($sign);
         if (empty($config)) {
             throw new ParameterException(['msg' => '配置参数异常']);
         }
@@ -145,11 +143,9 @@ class AliSms implements SmsBase
                     ])
                     ->request();
             }
-            Log::info("alisms-sendCode-{$phone}result" . json_encode($result->toArray()));
         } catch (ClientException $e) {
             Log::error("alisms-sendCode-{$phone}ClientException" . $e->getErrorMessage());
             return false;
-            //echo $e->getErrorMessage() . PHP_EOL;
         }
         if (isset($result['Code']) && $result['Code'] == "OK") {
             return true;
