@@ -133,7 +133,8 @@
       <workItem from="1589360248911" duration="2417000" />
       <workItem from="1589992384212" duration="36000" />
       <workItem from="1590514345416" duration="4851000" />
-      <workItem from="1590596568279" duration="1340000" />
+      <workItem from="1590596568279" duration="1605000" />
+      <workItem from="1590599127265" duration="305000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1583940212600</created>
@@ -296,7 +297,21 @@
       <option name="project" value="LOCAL" />
       <updated>1590596932174</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="测试">
+      <created>1590598187775</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1590598187775</updated>
+    </task>
+    <task id="LOCAL-00025" summary="测试">
+      <created>1590598424561</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1590598424561</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,10 +340,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1587222592581" />
-    <state x="330" y="39" key="CommitChangelistDialog2" timestamp="1590596932050">
+    <state x="330" y="39" key="CommitChangelistDialog2" timestamp="1590598424436">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="330" y="39" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1590596932050" />
+    <state x="330" y="39" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1590598424436" />
     <state x="539" y="310" key="NewPhpClassDialog" timestamp="1587221813681">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -341,10 +356,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="625" height="500" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1586317588171" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1590596936524">
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1590598431573">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1590596936524" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1590598431573" />
     <state x="600" y="208" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1583944333713">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

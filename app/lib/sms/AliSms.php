@@ -151,6 +151,8 @@ class AliSms implements SmsBase
         if (isset($result['Code']) && $result['Code'] == "OK") {
             return true;
         }
+        Log::error($result);
+
         return false;
     }
 
