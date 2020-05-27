@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2425b558-33b4-4e0c-9f37-7bd3e328fdaf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/sms/AliSms.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/sms/AliSms.php" afterDir="false" />
-    </list>
+    <list default="true" id="2425b558-33b4-4e0c-9f37-7bd3e328fdaf" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,7 +131,7 @@
       <workItem from="1589992384212" duration="36000" />
       <workItem from="1590514345416" duration="4851000" />
       <workItem from="1590596568279" duration="1605000" />
-      <workItem from="1590599127265" duration="305000" />
+      <workItem from="1590599127265" duration="661000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1583940212600</created>
@@ -311,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590598424561</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="测试">
+      <created>1590599564117</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1590599564117</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,10 +344,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="515" y="232" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1587222592581" />
-    <state x="330" y="39" key="CommitChangelistDialog2" timestamp="1590598424436">
+    <state x="330" y="39" key="CommitChangelistDialog2" timestamp="1590599563965">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="330" y="39" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1590598424436" />
+    <state x="330" y="39" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1590599563965" />
     <state x="539" y="310" key="NewPhpClassDialog" timestamp="1587221813681">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -356,10 +360,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="625" height="500" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1586317588171" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1590598431573">
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1590599568391">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1590598431573" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1590599568391" />
     <state x="600" y="208" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1583944333713">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
