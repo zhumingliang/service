@@ -144,12 +144,12 @@ class AliSms implements SmsBase
                     ])
                     ->request();
             }
+            Log::error($result);
+
         } catch (ClientException $e) {
             Log::error("alisms-sendCode-{$phone}ClientException" . $e->getErrorMessage());
             return false;
         }
-        LogT::create(["content" => json_encode($result)
-        ]);
         if (isset($result['Code']) && $result['Code'] == "OK") {
             return true;
         }
