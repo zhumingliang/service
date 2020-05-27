@@ -15,6 +15,7 @@ use AlibabaCloud\Client\Exception\ServerException;
 use app\lib\exception\ParameterException;
 use app\model\AliSmsT;
 use app\model\AliTemplateCodeT;
+use app\model\LogT;
 use think\facade\Log;
 use think\tests\SessionTest;
 
@@ -79,7 +80,7 @@ class AliSms implements SmsBase
 
     }
 
-    public static function sendTemplate(string $phone, string $type, array $params,string $sign)
+    public static function sendTemplate(string $phone, string $type, array $params, string $sign)
     {
         if (empty($phone) || empty($params) || empty($type)) {
             return false;
@@ -107,7 +108,7 @@ class AliSms implements SmsBase
             ->asDefaultClient();
 
         try {
-            if (empty($params)){
+            if (empty($params)) {
                 $result = AlibabaCloud::rpc()
                     ->product('Dysmsapi')
                     // ->scheme('https') // https | http
@@ -124,7 +125,7 @@ class AliSms implements SmsBase
                         ],
                     ])
                     ->request();
-            }else{
+            } else {
                 $result = AlibabaCloud::rpc()
                     ->product('Dysmsapi')
                     // ->scheme('https') // https | http
@@ -147,6 +148,8 @@ class AliSms implements SmsBase
             Log::error("alisms-sendCode-{$phone}ClientException" . $e->getErrorMessage());
             return false;
         }
+        LogT::create(["content" => json_encode($result)
+        ]);
         if (isset($result['Code']) && $result['Code'] == "OK") {
             return true;
         }
