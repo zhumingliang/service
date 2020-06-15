@@ -1,32 +1,45 @@
 <?php
 
 declare(strict_types=1);
+
 namespace app\business;
+
 use app\lib\Num;
 use app\lib\ClassArr;
-class Sms {
-    public static function sendCode(string $phoneNumber, int $len, string $type = "ali") :bool{
+use app\model\SmsRecordT;
+
+class Sms
+{
+    public static function sendCode(string $phoneNumber, int $len, string $type = "ali"): bool
+    {
 
         // 我们需要生成我们短信验证码 4位  6位
         $code = Num::getCode($len);
         $classStats = ClassArr::smsClassStat();
         $classObj = ClassArr::initClass($type, $classStats);
         $sms = $classObj::sendCode($phoneNumber, $code);
-        if($sms) {
+        if ($sms) {
             // 需要把我们得短信验证码记录到redis 并且需要给出一个失效时间 1分钟
             // 2 redis服务
-            cache(config("redis.code_pre").$phoneNumber, $code, config("redis.code_expire"));
+            cache(config("redis.code_pre") . $phoneNumber, $code, config("redis.code_expire"));
         }
 
         return $sms;
     }
 
 
-    public static function sendTemplate(string $phoneNumber,string $codeType,array $params,string $type = "ali",string $sign="ok") :bool{
+    public static function sendTemplate(string $phoneNumber, string $codeType, array $params, string $type = "ali", string $sign = "ok"): bool
+    {
 
         $classStats = ClassArr::smsClassStat();
         $classObj = ClassArr::initClass($type, $classStats);
-        $sms = $classObj::sendTemplate($phoneNumber, $codeType,$params,$sign);
+        $sms = $classObj::sendTemplate($phoneNumber, $codeType, $params, $sign);
+        $data = [
+            'sign' => $sign,
+            'content' => json_encode($params),
+            'state' => $sms ? 1 : 2
+        ];
+        SmsRecordT::create($data);
         return $sms;
     }
 }
