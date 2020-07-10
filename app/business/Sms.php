@@ -37,6 +37,7 @@ class Sms
         $data = [
             'sign' => $sign,
             'content' => json_encode($params),
+            'type' => $codeType,
             'state' => $sms ? 1 : 2
         ];
         SmsRecordT::create($data);
