@@ -31,7 +31,6 @@ class Sms
 
     public static function sendTemplate(string $phoneNumber, string $codeType, array $params, string $type = "ali", string $sign = "ok"): bool
     {
-
         $classStats = ClassArr::smsClassStat();
         $classObj = ClassArr::initClass($type, $classStats);
         $res = $classObj::sendTemplate($phoneNumber, $codeType, $params, $sign);
