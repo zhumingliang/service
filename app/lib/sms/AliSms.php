@@ -101,7 +101,7 @@ class AliSms implements SmsBase
             throw new ParameterException(['msg' => '配置参数异常,类别不存在']);
         }
         $templateCode = $template->template_code;
-        $content = self::prefixContent($params, $template);
+        $content = self::prefixContent($params, $template->template);
         AlibabaCloud::accessKeyClient($accessKeyId,
             $accessKeySecret)
             ->regionId($regionId)

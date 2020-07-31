@@ -36,9 +36,9 @@ class Sms
         $res = $classObj::sendTemplate($phoneNumber, $codeType, $params, $sign);
         $data = [
             'sign' => $sign,
-            'content' =>$res['content'],
+            'content' => $res['content'],
             'type' => $codeType,
-            'state' => $res['state'] ? 1 : 2
+            'state' => $res['state']
         ];
         SmsRecordT::create($data);
         return $res['state'];
