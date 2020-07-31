@@ -33,14 +33,14 @@ class Sms
 
         $classStats = ClassArr::smsClassStat();
         $classObj = ClassArr::initClass($type, $classStats);
-        $sms = $classObj::sendTemplate($phoneNumber, $codeType, $params, $sign);
+        $res = $classObj::sendTemplate($phoneNumber, $codeType, $params, $sign);
         $data = [
             'sign' => $sign,
-            'content' => json_encode($params),
+            'content' =>$res['content'],
             'type' => $codeType,
-            'state' => $sms ? 1 : 2
+            'state' => $res['state'] ? 1 : 2
         ];
         SmsRecordT::create($data);
-        return $sms;
+        return $res['state'];
     }
 }

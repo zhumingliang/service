@@ -12,6 +12,7 @@ namespace app\lib\sms;
 use AlibabaCloud\Client\AlibabaCloud;
 use AlibabaCloud\Client\Exception\ClientException;
 use AlibabaCloud\Client\Exception\ServerException;
+use app\lib\enum\CommonEnum;
 use app\lib\exception\ParameterException;
 use app\model\AliSmsT;
 use app\model\AliTemplateCodeT;
@@ -100,60 +101,55 @@ class AliSms implements SmsBase
             throw new ParameterException(['msg' => '配置参数异常,类别不存在']);
         }
         $templateCode = $template->template_code;
-
-
+        $content = self::prefixContent($params, $template);
         AlibabaCloud::accessKeyClient($accessKeyId,
             $accessKeySecret)
             ->regionId($regionId)
             ->asDefaultClient();
 
         try {
-            if (empty($params)) {
-                $result = AlibabaCloud::rpc()
-                    ->product('Dysmsapi')
-                    // ->scheme('https') // https | http
-                    ->version('2017-05-25')
-                    ->action('SendSms')
-                    ->method('POST')
-                    ->host($host)
-                    ->options([
-                        'query' => [
-                            'RegionId' => $regionId,
-                            'PhoneNumbers' => $phone,
-                            'SignName' => $signName,
-                            'TemplateCode' => $templateCode
-                        ],
-                    ])
-                    ->request();
-            } else {
-                $result = AlibabaCloud::rpc()
-                    ->product('Dysmsapi')
-                    // ->scheme('https') // https | http
-                    ->version('2017-05-25')
-                    ->action('SendSms')
-                    ->method('POST')
-                    ->host($host)
-                    ->options([
-                        'query' => [
-                            'RegionId' => $regionId,
-                            'PhoneNumbers' => $phone,
-                            'SignName' => $signName,
-                            'TemplateCode' => $templateCode,
-                            'TemplateParam' => json_encode($params),
-                        ],
-                    ])
-                    ->request();
+            $query = [
+                'RegionId' => $regionId,
+                'PhoneNumbers' => $phone,
+                'SignName' => $signName,
+                'TemplateCode' => $templateCode
+            ];
+            if (!empty($params)) {
+                $query['TemplateParam'] = json_encode($params);
             }
+            $result = AlibabaCloud::rpc()
+                ->product('Dysmsapi')
+                ->version('2017-05-25')
+                ->action('SendSms')
+                ->method('POST')
+                ->host($host)
+                ->options([
+                    'query' => $query,
+                ])
+                ->request();
         } catch (ClientException $e) {
             Log::error("alisms-sendCode-{$phone}ClientException" . $e->getErrorMessage());
-            return false;
+            throw new ParameterException(['msg' => '发送短信失败']);
         }
         if (isset($result['Code']) && $result['Code'] == "OK") {
-            return true;
+            $state = CommonEnum::STATE_IS_OK;
+        } else {
+            $state = CommonEnum::STATE_IS_FAIL;
         }
-        Log::error($result);
+        return [
+            'content' => $content,
+            'state' => $state
+        ];
+    }
 
-        return false;
+    private static function prefixContent($params, $template)
+    {
+        if (count($params)) {
+            foreach ($params as $k => $v) {
+                $template = str_replace('${' . $k . '}', $v, $template);
+            }
+        }
+        return $template;
     }
 
 }
