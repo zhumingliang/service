@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace app\business;
 
+use app\lib\enum\CommonEnum;
 use app\lib\Num;
 use app\lib\ClassArr;
 use app\model\SmsRecordT;
@@ -41,6 +42,5 @@ class Sms
             'state' => $res['state']
         ];
         SmsRecordT::create($data);
-        return $res['state'];
     }
 }
