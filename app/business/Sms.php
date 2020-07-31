@@ -42,5 +42,6 @@ class Sms
             'state' => $res['state']
         ];
         SmsRecordT::create($data);
+        return $res['state'];
     }
 }

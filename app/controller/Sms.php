@@ -29,9 +29,11 @@ class Sms extends BaseController
         $sign = empty($sign) ? 'ok' : $sign;
         $type = input('param.type', '', 'trim');
         $params = input('param.params', '', 'trim');
-        SmsBus::sendTemplate($phoneNumber, $type, $params, 'ali', $sign);
-        return json(new SuccessMessageWithData(['msg' => '发送验证码成功']));
-
+        $res = SmsBus::sendTemplate($phoneNumber, $type, $params, 'ali', $sign);
+        if ($res == CommonEnum::STATE_IS_OK) {
+            return json(new SuccessMessageWithData(['msg' => '发送验证码成功']));
+        }
+        return json(new SaveException(['msg' => '发送验证码失败']));
     }
 
 }

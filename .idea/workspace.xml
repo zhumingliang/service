@@ -141,7 +141,7 @@
       <workItem from="1595522060468" duration="1525000" />
       <workItem from="1596076493573" duration="299000" />
       <workItem from="1596078233333" duration="637000" />
-      <workItem from="1596129826680" duration="3750000" />
+      <workItem from="1596129826680" duration="4470000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1583940212600</created>
@@ -360,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596161190472</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="测试发送短信">
+      <created>1596161663635</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1596161663635</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,21 +381,21 @@
     <option name="LAST_COMMIT_MESSAGE" value="测试发送短信" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="330" y="39" key="CommitChangelistDialog2" timestamp="1596161190303">
+    <state x="330" y="39" key="CommitChangelistDialog2" timestamp="1596161663496">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="330" y="39" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1596161190303" />
+    <state x="330" y="39" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1596161663496" />
     <state x="539" y="310" key="NewPhpClassDialog" timestamp="1592190172168">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="539" y="310" key="NewPhpClassDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1592190172168" />
-    <state width="625" height="500" key="SwitcherDM" timestamp="1594344353042">
+    <state width="625" height="500" key="SwitcherDM" timestamp="1596161764515">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="625" height="500" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1594344353042" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1596161194748">
+    <state width="625" height="500" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1596161764515" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1596161668700">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1596161194748" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1596161668700" />
   </component>
 </project>
