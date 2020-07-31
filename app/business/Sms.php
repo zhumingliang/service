@@ -36,6 +36,8 @@ class Sms
         $res = $classObj::sendTemplate($phoneNumber, $codeType, $params, $sign);
         $data = [
             'sign' => $sign,
+            'phone' => $phoneNumber,
+            'params' => json_encode($params),
             'content' => $res['content'],
             'type' => $codeType,
             'state' => $res['state']
