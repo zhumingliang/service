@@ -41,6 +41,9 @@ class Sms
             'state' => $res['state']
         ];
         SmsRecordT::create($data);
-        return $res['state'];
+        if ($res['state'] == CommonEnum::STATE_IS_OK) {
+            return true;
+        }
+        return false;
     }
 }
