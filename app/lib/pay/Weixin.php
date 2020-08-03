@@ -23,9 +23,9 @@ class Weixin implements PayBase
     {
         $config = [
             // 必要配置
-            'app_id' => 'wx60f330220b4ed8c9',
-            'mch_id' => '1526698861',
-            'key' => '1234567890qwertyuiopasdfghjklzxc',   // API 密钥
+            'app_id' => 'wxda0c645fd4945a61',
+            'mch_id' => '1601561127',
+            'key' => '3RcCkiD6QKSa9hAx9O2VMSS5USGITcaw',   // API 密钥
             // 如需使用敏感接口（如退款、发送红包等）需要配置 API 证书路径(登录商户平台下载 API 证书)
             'cert_path' => 'cert.pem', // XXX: 绝对路径！！！！
             'key_path' => 'key.pem',      // XXX: 绝对路径！！！！
@@ -46,13 +46,20 @@ class Weixin implements PayBase
     {
         try {
             //$app = $this->getApp($data['company_id']);
-            $result = $this->app->order->unify([
+          /*  $result = $this->app->order->unify([
                 'body' => $data['body'],
                 'out_trade_no' => $data['out_trade_no'],
                 'total_fee' => $data['total_fee'],
-                'trade_type' => 'JSAPI',
+                'trade_type' => 'NATIVE',
                 'sign_type' => 'MD5',
-                'openid' => $data['openid']
+                //'openid' => $data['openid']
+            ]);*/ $result = $this->app->order->unify([
+                'body' => "短信充值",
+                'out_trade_no' => "Jk2iGBsFcl1qc9wQkX",
+                'total_fee' => 1,
+                'trade_type' => 'NATIVE',
+                'sign_type' => 'MD5',
+                //'openid' => $data['openid']
             ]);
             print_r($result);
             if ($result && isset($result['result_code'])
