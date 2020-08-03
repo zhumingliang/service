@@ -11,7 +11,7 @@ class PayBusiness
 
     public function unifiedOrder($appId, $payType, $data)
     {
-        $payType = "Weixin";
+        $payType = "weixin";
         $classStats = ClassArr::payClassStat();
         $classObj = ClassArr::initClass($payType, $classStats, [], true);
         try {
