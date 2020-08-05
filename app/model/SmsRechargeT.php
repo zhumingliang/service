@@ -14,4 +14,11 @@ class SmsRechargeT extends Model
             ->find();
 
     }
+
+    public static function rechargeWithOrderNumber($order_number)
+    {
+        return self::where('order_number', $order_number)
+            ->find();
+
+    }
 }

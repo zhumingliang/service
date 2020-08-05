@@ -20,9 +20,8 @@ use think\Exception;
 class Weixin implements PayBase
 {
 
-    private $app;
 
-    public function __construct()
+    public function getApp()
     {
         $config = [
             // 必要配置
@@ -37,9 +36,7 @@ class Weixin implements PayBase
             'notify_url' => 'http://service.tonglingok.com/notify/weixin',
             // 你也可以在下单时单独设置来想覆盖它
         ];
-        $this->app = Factory::payment($config);
-
-
+        return Factory::payment($config);
     }
 
     /**
@@ -53,7 +50,8 @@ class Weixin implements PayBase
             if (empty($recharge)) {
                 throw new ParameterException(['msg' => '订单不存在']);
             }
-            $result = $this->app->order->unify([
+            $app = $this->getApp();
+            $result = $app->order->unify([
                 'body' => "短信充值",
                 'out_trade_no' => $recharge->order_number,
                 'total_fee' => 100 * $recharge->money,
