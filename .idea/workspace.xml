@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2425b558-33b4-4e0c-9f37-7bd3e328fdaf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/model/PayWxT.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controller/notify/Weixin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/notify/Weixin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/pay/Weixin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/pay/Weixin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/model/SmsRechargeT.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/SmsRechargeT.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,14 +145,7 @@
       <workItem from="1596165274111" duration="551000" />
       <workItem from="1596470208812" duration="1819000" />
       <workItem from="1596614233463" duration="8852000" />
-      <workItem from="1596644135396" duration="203000" />
-    </task>
-    <task id="LOCAL-00002" summary="初始化">
-      <created>1583940838103</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1583940838103</updated>
+      <workItem from="1596644135396" duration="1000000" />
     </task>
     <task id="LOCAL-00003" summary="初始化">
       <created>1583940931580</created>
@@ -492,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596640784459</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="测试微信扫码支付">
+      <created>1596644356938</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1596644356940</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,10 +509,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="512" y="230" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1596644218970" />
-    <state x="330" y="39" key="CommitChangelistDialog2" timestamp="1596640784324">
+    <state x="330" y="39" key="CommitChangelistDialog2" timestamp="1596644356686">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="330" y="39" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1596640784324" />
+    <state x="330" y="39" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1596644356686" />
     <state x="539" y="310" key="NewPhpClassDialog" timestamp="1596644250808">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -523,10 +521,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="625" height="500" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1596161764515" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1596640789296">
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1596644361811">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1596640789296" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1596644361811" />
     <state x="577" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596622458005">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

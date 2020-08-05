@@ -57,7 +57,6 @@ class Weixin implements PayBase
                 'total_fee' => 100 * $recharge->money,
                 'trade_type' => 'NATIVE',
                 'sign_type' => 'MD5',
-                'notify_url' => "http://service.tonglingok.com/notify/weixin"
             ]);
             if ($result && isset($result['result_code'])
                 && isset($result['return_code'])

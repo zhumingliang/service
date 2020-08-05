@@ -11,6 +11,7 @@ namespace app\controller\notify;
 use app\api\model\PayWxT;
 use app\api\service\WalletService;
 use app\BaseController;
+use app\model\LogT;
 use app\model\SmsRechargeT;
 
 class Weixin extends BaseController
@@ -18,8 +19,11 @@ class Weixin extends BaseController
 
     public function index()
     {
+        LogT::saveInfo('111');
         $app = (new \app\lib\pay\Weixin())->getApp();
         $response = $app->handlePaidNotify(function ($message, $fail) {
+            LogT::saveInfo(json_encode($message));
+
             // 使用通知里的 "微信支付订单号" 或者 "商户订单号" 去自己的数据库找到订单
             $order = SmsRechargeT::rechargeWithOrderNumber($message['out_trade_no']);
 
