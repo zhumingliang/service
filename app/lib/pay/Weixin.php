@@ -55,7 +55,7 @@ class Weixin implements PayBase
                 //'openid' => $data['openid']
             ]);*/ $result = $this->app->order->unify([
                 'body' => "短信充值",
-                'out_trade_no' => "Jk2iGBsFcl1qc9wQkX",
+                'out_trade_no' => "Jk2iGBsFcl1qc9wQka",
                 'total_fee' => 1,
                 'trade_type' => 'NATIVE',
                 'sign_type' => 'MD5',
