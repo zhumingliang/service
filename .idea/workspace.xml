@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2425b558-33b4-4e0c-9f37-7bd3e328fdaf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/business/PayBusiness.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/business/PayBusiness.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/AuthBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/AuthBase.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controller/Pay.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/Pay.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/notify/Weixin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/notify/Weixin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/pay/Weixin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/pay/Weixin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +142,7 @@
       <workItem from="1596129826680" duration="6256000" />
       <workItem from="1596165274111" duration="551000" />
       <workItem from="1596470208812" duration="1819000" />
-      <workItem from="1596614233463" duration="1660000" />
+      <workItem from="1596614233463" duration="1851000" />
     </task>
     <task id="LOCAL-00001" summary="初始化">
       <created>1583940212600</created>
@@ -429,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596472521273</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="测试微信扫码支付">
+      <created>1596622467033</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1596622467033</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,10 +446,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="测试微信扫码支付" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="330" y="39" key="CommitChangelistDialog2" timestamp="1596472521122">
+    <state x="330" y="39" key="CommitChangelistDialog2" timestamp="1596622466849">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="330" y="39" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1596472521122" />
+    <state x="330" y="39" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1596622466849" />
     <state x="539" y="310" key="NewPhpClassDialog" timestamp="1592190172168">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -456,9 +458,13 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="625" height="500" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1596161764515" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1596472526349">
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1596622563203">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1596472526349" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1596622563203" />
+    <state x="577" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596622458005">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="577" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1680.1050@0.0.1680.1050" timestamp="1596622458005" />
   </component>
 </project>

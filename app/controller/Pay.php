@@ -22,6 +22,7 @@ class Pay extends AuthBase
         $params = input("param.");
         try {
             $result = (new PayBusiness())->unifiedOrder($this->appId, $this->payType, $params);
+            var_dump($result);
         } catch (\Exception $e) {
             throw new WeChatException(['msg' => $e->getMessage()]);
         }
