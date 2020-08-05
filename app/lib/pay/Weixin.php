@@ -8,10 +8,12 @@
 
 namespace app\lib\pay;
 
+use app\lib\exception\ParameterException;
 use app\lib\exception\SaveException;
 use app\lib\exception\WeChatException;
 use app\lib\pay\weixin\lib\database\WxPayUnifiedOrder;
 use app\lib\pay\weixin\lib\WxPayNativePay;
+use app\model\SmsRechargeT;
 use EasyWeChat\Factory;
 use think\Exception;
 
@@ -46,19 +48,15 @@ class Weixin implements PayBase
     public function unifiedOrder($data)
     {
         try {
-            //$app = $this->getApp($data['company_id']);
-            /*  $result = $this->app->order->unify([
-                  'body' => $data['body'],
-                  'out_trade_no' => $data['out_trade_no'],
-                  'total_fee' => $data['total_fee'],
-                  'trade_type' => 'NATIVE',
-                  'sign_type' => 'MD5',
-                  //'openid' => $data['openid']
-              ]);*/
+            $id = $data['id'];
+            $recharge = SmsRechargeT::recharge($id);
+            if (empty($recharge)) {
+                throw new ParameterException(['msg' => '订单不存在']);
+            }
             $result = $this->app->order->unify([
                 'body' => "短信充值",
-                'out_trade_no' => "Jk22GBsFcl1qc9wQka",
-                'total_fee' => 1,
+                'out_trade_no' => $recharge->order_number,
+                'total_fee' => 100*$recharge->money,
                 'trade_type' => 'NATIVE',
                 'sign_type' => 'MD5',
                 //'openid' => $data['openid']
@@ -68,7 +66,6 @@ class Weixin implements PayBase
                 && $result['result_code'] == "SUCCESS"
                 && $result['return_code'] == "SUCCESS"
             ) {
-                print_r($result);
                 $url = $result["code_url"];
                 return ["data" => request()->domain() . $url];
             } else {
