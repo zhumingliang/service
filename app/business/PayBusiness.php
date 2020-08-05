@@ -16,6 +16,7 @@ class PayBusiness
         $classObj = ClassArr::initClass($payType, $classStats, [], true);
         try {
             $result = $classObj->unifiedOrder($data);
+            return $result;
         } catch (\Exception $e) {
             echo $e->getMessage();
             return false;

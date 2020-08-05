@@ -15,6 +15,6 @@ class Weixin extends BaseController
 
     public function index()
     {
-        echo 11;
+        
     }
 }
