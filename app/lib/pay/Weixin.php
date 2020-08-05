@@ -56,10 +56,10 @@ class Weixin implements PayBase
             $result = $this->app->order->unify([
                 'body' => "短信充值",
                 'out_trade_no' => $recharge->order_number,
-                'total_fee' => 100*$recharge->money,
+                'total_fee' => 100 * $recharge->money,
                 'trade_type' => 'NATIVE',
                 'sign_type' => 'MD5',
-                //'openid' => $data['openid']
+                'notify_url' => "http://service.tonglingok.com/notify/weixin"
             ]);
             if ($result && isset($result['result_code'])
                 && isset($result['return_code'])
@@ -67,7 +67,8 @@ class Weixin implements PayBase
                 && $result['return_code'] == "SUCCESS"
             ) {
                 $url = $result["code_url"];
-                return ["data" => request()->domain() . $url];
+                // return ["url" => request()->domain() . '/' . $url];
+                return ["url" => $url];
             } else {
                 throw new SaveException(['msg' => "下单失败，请稍候重试"]);
             }
