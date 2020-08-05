@@ -63,15 +63,13 @@ class Weixin implements PayBase
                 'sign_type' => 'MD5',
                 //'openid' => $data['openid']
             ]);
-            print_r($result);
             if ($result && isset($result['result_code'])
                 && isset($result['return_code'])
                 && $result['result_code'] == "SUCCESS"
                 && $result['return_code'] == "SUCCESS"
             ) {
-                print_r($result);
                 $url = $result["code_url"];
-                return request()->domain() . (string)url("qcode/index", ["data" => $url]);
+                return ["data" => request()->domain() . $url];
             } else {
                 throw new SaveException(['msg' => "下单失败，请稍候重试"]);
             }
