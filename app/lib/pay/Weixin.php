@@ -66,6 +66,7 @@ class Weixin implements PayBase
                 && $result['result_code'] == "SUCCESS"
                 && $result['return_code'] == "SUCCESS"
             ) {
+                print_r($result);
                 $url = $result["code_url"];
                 return request()->domain() . (string)url("qcode/index", ["data" => $url]);
             } else {
