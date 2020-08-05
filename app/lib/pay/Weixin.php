@@ -8,6 +8,7 @@
 
 namespace app\lib\pay;
 
+use app\lib\exception\SaveException;
 use app\lib\exception\WeChatException;
 use app\lib\pay\weixin\lib\database\WxPayUnifiedOrder;
 use app\lib\pay\weixin\lib\WxPayNativePay;
@@ -46,21 +47,23 @@ class Weixin implements PayBase
     {
         try {
             //$app = $this->getApp($data['company_id']);
-          /*  $result = $this->app->order->unify([
-                'body' => $data['body'],
-                'out_trade_no' => $data['out_trade_no'],
-                'total_fee' => $data['total_fee'],
-                'trade_type' => 'NATIVE',
-                'sign_type' => 'MD5',
-                //'openid' => $data['openid']
-            ]);*/ $result = $this->app->order->unify([
+            /*  $result = $this->app->order->unify([
+                  'body' => $data['body'],
+                  'out_trade_no' => $data['out_trade_no'],
+                  'total_fee' => $data['total_fee'],
+                  'trade_type' => 'NATIVE',
+                  'sign_type' => 'MD5',
+                  //'openid' => $data['openid']
+              ]);*/
+            $result = $this->app->order->unify([
                 'body' => "短信充值",
-                'out_trade_no' => "Jk2iGBsFcl1qc9wQka",
+                'out_trade_no' => "Jk22GBsFcl1qc9wQka",
                 'total_fee' => 1,
                 'trade_type' => 'NATIVE',
                 'sign_type' => 'MD5',
                 //'openid' => $data['openid']
             ]);
+            print_r($result);
             if ($result && isset($result['result_code'])
                 && isset($result['return_code'])
                 && $result['result_code'] == "SUCCESS"
@@ -70,7 +73,7 @@ class Weixin implements PayBase
                 $url = $result["code_url"];
                 return request()->domain() . (string)url("qcode/index", ["data" => $url]);
             } else {
-                throw new \Exception("下单失败，请稍候重试");
+                throw new SaveException(['msg' => "下单失败，请稍候重试"]);
             }
         } catch (\Exception $e) {
             throw new WeChatException(['msg' => "对接微信支付内部异常"]);
