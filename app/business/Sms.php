@@ -7,6 +7,7 @@ namespace app\business;
 use app\lib\enum\CommonEnum;
 use app\lib\Num;
 use app\lib\ClassArr;
+use app\model\SmsRechargeT;
 use app\model\SmsRecordT;
 
 class Sms
@@ -31,21 +32,31 @@ class Sms
 
     public static function sendTemplate(string $phoneNumber, string $codeType, array $params, string $type = "ali", string $sign = "ok"): bool
     {
-        $classStats = ClassArr::smsClassStat();
-        $classObj = ClassArr::initClass($type, $classStats);
-        $res = $classObj::sendTemplate($phoneNumber, $codeType, $params, $sign);
-        $data = [
-            'sign' => $sign,
-            'phone' => $phoneNumber,
-            'params' => json_encode($params),
-            'content' => $res['content'],
-            'type' => $codeType,
-            'state' => $res['state']
-        ];
-        SmsRecordT::create($data);
-        if ($res['state'] == CommonEnum::STATE_IS_OK) {
-            return true;
+        if (self::checkCount($sign)) {
+            $classStats = ClassArr::smsClassStat();
+            $classObj = ClassArr::initClass($type, $classStats);
+            $res = $classObj::sendTemplate($phoneNumber, $codeType, $params, $sign);
+            $data = [
+                'sign' => $sign,
+                'phone' => $phoneNumber,
+                'params' => json_encode($params),
+                'content' => $res['content'],
+                'type' => $codeType,
+                'state' => $res['state']
+            ];
+            SmsRecordT::create($data);
+            if ($res['state'] == CommonEnum::STATE_IS_OK) {
+                return true;
+            }
+            return false;
         }
-        return false;
+    }
+
+    public static function checkCount($sign)
+    {
+        $sendCount = SmsRecordT::sendCount($sign);
+        $rechargeCount = SmsRechargeT::rechargeCount($sign);
+        return $rechargeCount - $sendCount;
+
     }
 }

@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2425b558-33b4-4e0c-9f37-7bd3e328fdaf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controller/notify/Weixin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/notify/Weixin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/business/Sms.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/business/Sms.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/pay/Weixin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/pay/Weixin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/SmsRechargeT.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/SmsRechargeT.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/SmsRecordT.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/SmsRecordT.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,11 +87,13 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -105,6 +110,7 @@
       <recent name="$PROJECT_DIR$/config" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -145,21 +151,18 @@
       <workItem from="1596165274111" duration="551000" />
       <workItem from="1596470208812" duration="1819000" />
       <workItem from="1596614233463" duration="8852000" />
-      <workItem from="1596644135396" duration="1000000" />
-    </task>
-    <task id="LOCAL-00003" summary="初始化">
-      <created>1583940931580</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1583940931580</updated>
-    </task>
-    <task id="LOCAL-00004" summary="初始化">
-      <created>1583944078032</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1583944078032</updated>
+      <workItem from="1596644135396" duration="2078000" />
+      <workItem from="1596786897232" duration="9000" />
+      <workItem from="1596982166964" duration="211000" />
+      <workItem from="1597018021973" duration="605000" />
+      <workItem from="1597157846555" duration="73000" />
+      <workItem from="1597158158274" duration="606000" />
+      <workItem from="1599143682697" duration="15000" />
+      <workItem from="1605755052713" duration="43000" />
+      <workItem from="1608381940075" duration="9000" />
+      <workItem from="1608382110346" duration="20000" />
+      <workItem from="1609996891103" duration="808000" />
+      <workItem from="1610027030181" duration="66000" />
     </task>
     <task id="LOCAL-00005" summary="初始化">
       <created>1583944415900</created>
@@ -490,11 +493,25 @@
       <option name="project" value="LOCAL" />
       <updated>1596644356940</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="测试微信扫码支付">
+      <created>1596645173913</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1596645173913</updated>
+    </task>
+    <task id="LOCAL-00053" summary="测试微信扫码支付">
+      <created>1596645415829</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1596645415830</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -505,14 +522,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="测试微信扫码支付" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="512" y="230" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596644218970">
+    <state x="512" y="230" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1597158665200">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="512" y="230" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1596644218970" />
-    <state x="330" y="39" key="CommitChangelistDialog2" timestamp="1596644356686">
+    <state x="512" y="230" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1597158665200" />
+    <state x="330" y="39" key="CommitChangelistDialog2" timestamp="1596645415673">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="330" y="39" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1596644356686" />
+    <state x="330" y="39" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1596645415673" />
     <state x="539" y="310" key="NewPhpClassDialog" timestamp="1596644250808">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -521,10 +538,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="625" height="500" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1596161764515" />
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1596644361811">
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2" timestamp="1596645421245">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1596644361811" />
+    <state x="340" y="202" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1596645421245" />
     <state x="577" y="427" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596622458005">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>

@@ -64,7 +64,6 @@ class Weixin implements PayBase
                 && $result['return_code'] == "SUCCESS"
             ) {
                 $url = $result["code_url"];
-                // return ["url" => request()->domain() . '/' . $url];
                 return ["url" => $url];
             } else {
                 throw new SaveException(['msg' => "下单失败，请稍候重试"]);
