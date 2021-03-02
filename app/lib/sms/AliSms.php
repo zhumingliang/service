@@ -127,8 +127,7 @@ class AliSms implements SmsBase
                     'query' => $query,
                 ])
                 ->request();
-            LogT::saveInfo(json_encode($result));
-
+            Log::error($result);
         } catch (ClientException $e) {
             Log::error("alisms-sendCode-{$phone}ClientException" . $e->getErrorMessage());
             throw new ParameterException(['msg' => '发送短信失败']);
