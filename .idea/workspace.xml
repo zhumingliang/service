@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2425b558-33b4-4e0c-9f37-7bd3e328fdaf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/sms/AliSms.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/sms/AliSms.php" afterDir="false" />
-    </list>
+    <list default="true" id="2425b558-33b4-4e0c-9f37-7bd3e328fdaf" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -162,14 +159,7 @@
       <workItem from="1610027509819" duration="5000" />
       <workItem from="1611330540260" duration="878000" />
       <workItem from="1611382081378" duration="13000" />
-      <workItem from="1614693717657" duration="1468000" />
-    </task>
-    <task id="LOCAL-00009" summary="测试">
-      <created>1586319802552</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1586319802552</updated>
+      <workItem from="1614693717657" duration="1826000" />
     </task>
     <task id="LOCAL-00010" summary="测试">
       <created>1586322648962</created>
@@ -507,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614695170277</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="数据库更新">
+      <created>1614695663293</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1614695663293</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,15 +520,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="数据库更新" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="315" y="30" key="CommitChangelistDialog2" timestamp="1614695170164">
+    <state x="315" y="30" key="CommitChangelistDialog2" timestamp="1614695663176">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="315" y="30" key="CommitChangelistDialog2/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1614695170164" />
+    <state x="315" y="30" key="CommitChangelistDialog2/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1614695663176" />
     <state x="315" y="30" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1610027118993" />
-    <state x="340" y="213" key="Vcs.Push.Dialog.v2" timestamp="1614695302607">
+    <state x="340" y="213" key="Vcs.Push.Dialog.v2" timestamp="1614695665697">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="340" y="213" key="Vcs.Push.Dialog.v2/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1614695302607" />
+    <state x="340" y="213" key="Vcs.Push.Dialog.v2/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1614695665697" />
     <state x="340" y="213" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1610027121424" />
     <state x="421" y="244" key="run.anything.popup" timestamp="1614694481796">
       <screen x="0" y="0" width="1680" height="1050" />
