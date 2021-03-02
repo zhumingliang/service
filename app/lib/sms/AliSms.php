@@ -127,6 +127,8 @@ class AliSms implements SmsBase
                     'query' => $query,
                 ])
                 ->request();
+            LogT::saveInfo(json_encode($result));
+
         } catch (ClientException $e) {
             Log::error("alisms-sendCode-{$phone}ClientException" . $e->getErrorMessage());
             throw new ParameterException(['msg' => '发送短信失败']);
@@ -134,7 +136,6 @@ class AliSms implements SmsBase
         if (isset($result['Code']) && $result['Code'] == "OK") {
             $state = CommonEnum::STATE_IS_OK;
         } else {
-            LogT::saveInfo(json_encode($result));
             $state = CommonEnum::STATE_IS_FAIL;
         }
         return [

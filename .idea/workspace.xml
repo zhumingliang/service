@@ -162,14 +162,7 @@
       <workItem from="1610027509819" duration="5000" />
       <workItem from="1611330540260" duration="878000" />
       <workItem from="1611382081378" duration="13000" />
-      <workItem from="1614693717657" duration="244000" />
-    </task>
-    <task id="LOCAL-00006" summary="初始化">
-      <created>1583945219423</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1583945219423</updated>
+      <workItem from="1614693717657" duration="515000" />
     </task>
     <task id="LOCAL-00007" summary="测试">
       <created>1586317444780</created>
@@ -507,7 +500,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610027119243</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="数据库更新">
+      <created>1614693970481</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1614693970481</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,13 +523,15 @@
     <option name="LAST_COMMIT_MESSAGE" value="数据库更新" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="315" y="30" key="CommitChangelistDialog2" timestamp="1610027118993">
+    <state x="315" y="30" key="CommitChangelistDialog2" timestamp="1614693970339">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="315" y="30" key="CommitChangelistDialog2/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1614693970339" />
     <state x="315" y="30" key="CommitChangelistDialog2/0.0.1680.1050@0.0.1680.1050" timestamp="1610027118993" />
-    <state x="340" y="213" key="Vcs.Push.Dialog.v2" timestamp="1610027121424">
+    <state x="340" y="213" key="Vcs.Push.Dialog.v2" timestamp="1614693972752">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="340" y="213" key="Vcs.Push.Dialog.v2/-2560.-183.2560.1440/0.0.1680.1050@0.0.1680.1050" timestamp="1614693972752" />
     <state x="340" y="213" key="Vcs.Push.Dialog.v2/0.0.1680.1050@0.0.1680.1050" timestamp="1610027121424" />
   </component>
 </project>
