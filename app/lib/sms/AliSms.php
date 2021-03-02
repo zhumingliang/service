@@ -134,6 +134,7 @@ class AliSms implements SmsBase
         if (isset($result['Code']) && $result['Code'] == "OK") {
             $state = CommonEnum::STATE_IS_OK;
         } else {
+            LogT::saveInfo(json_encode($result));
             $state = CommonEnum::STATE_IS_FAIL;
         }
         return [
